@@ -190,18 +190,26 @@ a { text-decoration: none; color: inherit; }
   padding: 0 24px;
 }
 
-.hero-open {
+.hero-coming-soon {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  letter-spacing: 0.4em;
-  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
   color: var(--gold-light);
+  margin-bottom: 8px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
 
-.hero-open span {
-  display: inline-block;
-  padding: 6px 20px;
+.hero-open-date {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  margin-bottom: 32px;
+  padding: 8px 28px;
   border: 1px solid rgba(200, 149, 108, 0.5);
+  display: inline-block;
 }
 
 .hero-title {
@@ -760,6 +768,46 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ========================================
+   DUMMY LABEL
+   ======================================== */
+.dummy-photo {
+  position: relative;
+}
+
+.dummy-photo::after {
+  content: 'DUMMY';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.hero-dummy-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.35);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+/* ========================================
    REDUCED MOTION
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
@@ -795,8 +843,10 @@ a { text-decoration: none; color: inherit; }
 <section class="hero">
   <div class="hero-bg" role="img" aria-label="淡路島のオーシャンビューテラスの夕焼け"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-dummy-label">DUMMY</div>
   <div class="hero-content">
-    <div class="hero-open"><span>2026.4  GRAND OPEN</span></div>
+    <div class="hero-coming-soon">Coming Soon</div>
+    <div class="hero-open-date">4月下旬グランドオープン</div>
     <h1 class="hero-title en">KONA Ocean Club</h1>
     <p class="hero-subtitle">空と海を独占する、高台のプライベートヴィラ</p>
     <p class="hero-tagline">淡路島・全4棟 ── サウナ＆ジャグジー完備</p>
@@ -808,7 +858,7 @@ a { text-decoration: none; color: inherit; }
 <section class="concept section-padding" id="concept">
   <div class="container">
     <div class="concept-grid">
-      <div class="concept-image fade-in">
+      <div class="concept-image fade-in dummy-photo">
         <img src="images/night-terrace-pool.jpg" alt="夜のテラスとプールから望むオーシャンビュー" loading="lazy" width="800" height="600">
       </div>
       <div class="fade-in">
@@ -841,7 +891,7 @@ a { text-decoration: none; color: inherit; }
     </div>
     <div class="features-grid">
       <div class="feature-card fade-in">
-        <div class="feature-image">
+        <div class="feature-image dummy-photo">
           <img src="images/sauna-stove.jpg" alt="本格プライベートサウナの内部" loading="lazy" width="600" height="800">
         </div>
         <div class="feature-body">
@@ -851,7 +901,7 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-image">
+        <div class="feature-image dummy-photo">
           <img src="images/ocean-view-terrace.jpg" alt="高台テラスからのオーシャンビュー" loading="lazy" width="600" height="800">
         </div>
         <div class="feature-body">
@@ -861,7 +911,7 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-image">
+        <div class="feature-image dummy-photo">
           <img src="images/night-lounge.jpg" alt="プライベートテラスとラウンジ空間" loading="lazy" width="600" height="800">
         </div>
         <div class="feature-body">
@@ -883,7 +933,7 @@ a { text-decoration: none; color: inherit; }
       <p class="section-desc mx-auto">全4棟3タイプのヴィラ。すべての棟にサウナ・ジャグジー・オーシャンビューテラスを備えています。</p>
     </div>
     <div class="rooms-grid">
-      <div class="room-card fade-in">
+      <div class="room-card fade-in dummy-photo">
         <img src="images/villa-exterior-day.jpg" alt="A棟外観" loading="lazy" width="800" height="500">
         <div class="room-overlay">
           <div class="room-tag en">TYPE A</div>
@@ -891,7 +941,7 @@ a { text-decoration: none; color: inherit; }
           <div class="room-info">定員6名 ／ サウナ・ジャグジー・テラス完備</div>
         </div>
       </div>
-      <div class="room-card fade-in">
+      <div class="room-card fade-in dummy-photo">
         <img src="images/villa-exterior-night.jpg" alt="B棟外観" loading="lazy" width="800" height="500">
         <div class="room-overlay">
           <div class="room-tag en">TYPE B</div>
@@ -899,7 +949,7 @@ a { text-decoration: none; color: inherit; }
           <div class="room-info">定員4名 ／ サウナ・ジャグジー・テラス完備</div>
         </div>
       </div>
-      <div class="room-card fade-in">
+      <div class="room-card fade-in dummy-photo">
         <img src="images/koti-exterior-night.jpg" alt="C棟外観" loading="lazy" width="800" height="500">
         <div class="room-overlay">
           <div class="room-tag en">TYPE C</div>
@@ -907,7 +957,7 @@ a { text-decoration: none; color: inherit; }
           <div class="room-info">定員4名 ／ サウナ・ジャグジー・テラス完備</div>
         </div>
       </div>
-      <div class="room-card fade-in">
+      <div class="room-card fade-in dummy-photo">
         <img src="images/koti-exterior-day.jpg" alt="D棟外観" loading="lazy" width="800" height="500">
         <div class="room-overlay">
           <div class="room-tag en">TYPE D</div>
@@ -941,7 +991,7 @@ a { text-decoration: none; color: inherit; }
           <li>出張料理人による室内ディナー（予約制）</li>
         </ul>
       </div>
-      <div class="dining-image fade-in">
+      <div class="dining-image fade-in dummy-photo">
         <img src="images/ocean-view-terrace.jpg" alt="テラスでのBBQとオーシャンビュー" loading="lazy" width="800" height="600">
       </div>
     </div>
