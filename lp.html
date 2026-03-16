@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONA Ocean Club | 淡路島の高台に誕生するプライベートヴィラ</title>
+<meta name="description" content="2026年4月、淡路島の高台に全棟プライベートサウナ＆ジャグジー付きヴィラが誕生。圧倒的なオーシャンビューと完全プライベート空間で、極上の非日常体験を。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #1a2d42;
+  --navy-deep: #0f1c2e;
+  --gold: #c8956c;
+  --gold-light: #dbb89a;
+  --sand: #f7f3ee;
+  --sand-dark: #ede6db;
+  --white: #ffffff;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: var(--text);
+  background: var(--sand);
+  line-height: 1.8;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.serif { font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', serif; }
+.en { font-family: 'Cormorant Garamond', serif; }
+
+/* ========================================
+   UTILITY
+   ======================================== */
+.section-padding { padding: 100px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.section-desc {
+  font-size: clamp(0.875rem, 1.4vw, 1rem);
+  color: var(--text-light);
+  line-height: 2;
+  max-width: 640px;
+}
+
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* ========================================
+   STICKY NAV
+   ======================================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 24px;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+
+.nav.scrolled {
+  background: rgba(15, 28, 46, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: var(--white);
+  letter-spacing: 0.15em;
+  font-weight: 400;
+}
+
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold-light); }
+
+.nav-cta {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+}
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  width: 24px;
+  height: 1.5px;
+  background: var(--white);
+  transition: all 0.3s;
+}
+
+/* ========================================
+   HERO / FIRST VIEW
+   ======================================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero-sunset.jpg') center center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 28, 46, 0.3) 0%,
+    rgba(15, 28, 46, 0.15) 40%,
+    rgba(15, 28, 46, 0.5) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  padding: 0 24px;
+}
+
+.hero-open {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  letter-spacing: 0.4em;
+  margin-bottom: 20px;
+  color: var(--gold-light);
+}
+
+.hero-open span {
+  display: inline-block;
+  padding: 6px 20px;
+  border: 1px solid rgba(200, 149, 108, 0.5);
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.hero-tagline {
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  letter-spacing: 0.15em;
+  line-height: 2;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.6);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.hero-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.4);
+  margin: 8px auto 0;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ========================================
+   CONCEPT
+   ======================================== */
+.concept {
+  background: var(--navy-deep);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.concept::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(200,149,108,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.concept-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.concept-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.concept-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(200, 149, 108, 0.2);
+  pointer-events: none;
+}
+
+.concept .section-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+.concept-vp {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--gold-light);
+  font-weight: 300;
+}
+
+/* ========================================
+   FEATURES (3つの特徴)
+   ======================================== */
+.features { background: var(--sand); }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  transition: transform 0.4s;
+}
+
+.feature-card:hover { transform: translateY(-4px); }
+
+.feature-image {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.feature-card:hover .feature-image img { transform: scale(1.05); }
+
+.feature-body { padding: 28px 24px; }
+
+.feature-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+
+.feature-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.feature-text {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+/* ========================================
+   ROOMS（客室紹介）
+   ======================================== */
+.rooms { background: var(--white); }
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.room-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  cursor: pointer;
+}
+
+.room-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.room-card:hover img { transform: scale(1.05); }
+
+.room-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,28,46,0.8) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+}
+
+.room-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+
+.room-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.25rem;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.room-info {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   DINING（食の体験）
+   ======================================== */
+.dining {
+  background: var(--navy-deep);
+  color: var(--white);
+  position: relative;
+}
+
+.dining-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.dining .section-desc { color: rgba(255,255,255,0.7); }
+
+.dining-features {
+  list-style: none;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dining-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+}
+
+.dining-features li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 10px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+
+.dining-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.dining-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* ========================================
+   EXPERIENCE（過ごし方）
+   ======================================== */
+.experience { background: var(--sand); }
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.experience-card {
+  background: var(--white);
+  padding: 40px 28px;
+  text-align: center;
+  border: 1px solid var(--sand-dark);
+  transition: border-color 0.3s;
+}
+
+.experience-card:hover { border-color: var(--gold); }
+
+.experience-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.experience-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.experience-text {
+  font-size: 0.825rem;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+/* ========================================
+   INFO（施設情報）
+   ======================================== */
+.info { background: var(--white); }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 48px;
+}
+
+.info-map {
+  aspect-ratio: 4/3;
+  background: var(--sand-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.info-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.info-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-row {
+  display: flex;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--sand-dark);
+  font-size: 0.9rem;
+}
+
+.info-row dt {
+  width: 120px;
+  flex-shrink: 0;
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+}
+
+.info-row dd {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ========================================
+   CTA
+   ======================================== */
+.cta {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 100px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(200,149,108,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.cta-sub {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 48px;
+  letter-spacing: 0.08em;
+  position: relative;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 48px;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: none;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200, 149, 108, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+}
+
+.btn-outline:hover {
+  background: rgba(200, 149, 108, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.5);
+  padding: 40px 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+}
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .section-padding { padding: 72px 20px; }
+
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+
+  .nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 28, 46, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .nav .nav-cta { display: none; }
+
+  .concept-grid,
+  .dining-grid,
+  .info-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  .features-grid,
+  .experience-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  .rooms-grid { grid-template-columns: 1fr; }
+
+  .dining-image { order: -1; }
+
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .btn { width: 100%; max-width: 320px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.2rem; }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .hero-scroll::after { animation: none; }
+  .feature-card:hover .feature-image img,
+  .room-card:hover img { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ======== NAV ======== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">KONA OCEAN CLUB</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#concept">CONCEPT</a></li>
+      <li><a href="#features">FEATURES</a></li>
+      <li><a href="#rooms">ROOMS</a></li>
+      <li><a href="#dining">DINING</a></li>
+      <li><a href="#info">ACCESS</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta en">RESERVE</a>
+    <div class="nav-hamburger" id="hamburger" aria-label="メニューを開く" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== HERO ======== -->
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="淡路島のオーシャンビューテラスの夕焼け"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-open"><span>2026.4  GRAND OPEN</span></div>
+    <h1 class="hero-title en">KONA Ocean Club</h1>
+    <p class="hero-subtitle">空と海を独占する、高台のプライベートヴィラ</p>
+    <p class="hero-tagline">淡路島・全4棟 ── サウナ＆ジャグジー完備</p>
+  </div>
+  <div class="hero-scroll en">SCROLL</div>
+</section>
+
+<!-- ======== CONCEPT ======== -->
+<section class="concept section-padding" id="concept">
+  <div class="container">
+    <div class="concept-grid">
+      <div class="concept-image fade-in">
+        <img src="images/night-terrace-pool.jpg" alt="夜のテラスとプールから望むオーシャンビュー" loading="lazy" width="800" height="600">
+      </div>
+      <div class="fade-in">
+        <span class="section-label en">Concept</span>
+        <h2 class="section-title" style="color: var(--white);">
+          この景色を、<br>あなただけのものに。
+        </h2>
+        <p class="section-desc">
+          淡路島の高台に佇む全4棟のプライベートヴィラ。<br>
+          眼下に広がる海、空に溶ける夕陽。<br>
+          誰にも邪魔されない時間が、ここにあります。
+        </p>
+        <div class="concept-vp">
+          空と海を独占する高台の絶景。<br>
+          本格サウナとジャグジーを備え、<br>
+          淡路島の美食をお部屋で味わい尽くす、<br>
+          極上のプライベート・ヴィラ。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FEATURES ======== -->
+<section class="features section-padding" id="features">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label en">Features</span>
+      <h2 class="section-title">KONA Ocean Club の3つの魅力</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-image">
+          <img src="images/sauna-stove.jpg" alt="本格プライベートサウナの内部" loading="lazy" width="600" height="800">
+        </div>
+        <div class="feature-body">
+          <div class="feature-num en">01</div>
+          <h3 class="feature-name">全棟プライベートサウナ＆ジャグジー</h3>
+          <p class="feature-text">全4棟すべてに本格フィンランド式サウナとジャグジーを完備。海を眺めながらの外気浴は、ここだけの贅沢。</p>
+        </div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-image">
+          <img src="images/ocean-view-terrace.jpg" alt="高台テラスからのオーシャンビュー" loading="lazy" width="600" height="800">
+        </div>
+        <div class="feature-body">
+          <div class="feature-num en">02</div>
+          <h3 class="feature-name">圧倒的な高台のオーシャンビュー</h3>
+          <p class="feature-text">高台から見下ろす淡路島の海と空。朝焼け、昼の碧、夕陽、星空──時間ごとに変わる絶景を独り占め。</p>
+        </div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-image">
+          <img src="images/night-lounge.jpg" alt="プライベートテラスとラウンジ空間" loading="lazy" width="600" height="800">
+        </div>
+        <div class="feature-body">
+          <div class="feature-num en">03</div>
+          <h3 class="feature-name">1棟貸切の完全プライベート空間</h3>
+          <p class="feature-text">最大8名収容の広々としたヴィラを1棟まるごと貸切。お子様連れでも、グループでも、周囲を気にせずお過ごしいただけます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== ROOMS ======== -->
+<section class="rooms section-padding" id="rooms">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label en">Rooms</span>
+      <h2 class="section-title">全4棟のプライベートヴィラ</h2>
+      <p class="section-desc mx-auto">全4棟3タイプのヴィラ。すべての棟にサウナ・ジャグジー・オーシャンビューテラスを備えています。</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card fade-in">
+        <img src="images/villa-exterior-day.jpg" alt="A棟外観" loading="lazy" width="800" height="500">
+        <div class="room-overlay">
+          <div class="room-tag en">TYPE A</div>
+          <div class="room-name">A棟</div>
+          <div class="room-info">定員6名 ／ サウナ・ジャグジー・テラス完備</div>
+        </div>
+      </div>
+      <div class="room-card fade-in">
+        <img src="images/villa-exterior-night.jpg" alt="B棟外観" loading="lazy" width="800" height="500">
+        <div class="room-overlay">
+          <div class="room-tag en">TYPE B</div>
+          <div class="room-name">B棟</div>
+          <div class="room-info">定員4名 ／ サウナ・ジャグジー・テラス完備</div>
+        </div>
+      </div>
+      <div class="room-card fade-in">
+        <img src="images/koti-exterior-night.jpg" alt="C棟外観" loading="lazy" width="800" height="500">
+        <div class="room-overlay">
+          <div class="room-tag en">TYPE C</div>
+          <div class="room-name">C棟</div>
+          <div class="room-info">定員4名 ／ サウナ・ジャグジー・テラス完備</div>
+        </div>
+      </div>
+      <div class="room-card fade-in">
+        <img src="images/koti-exterior-day.jpg" alt="D棟外観" loading="lazy" width="800" height="500">
+        <div class="room-overlay">
+          <div class="room-tag en">TYPE D</div>
+          <div class="room-name">D棟</div>
+          <div class="room-info">定員8名 ／ サウナ・ジャグジー・テラス完備</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== DINING ======== -->
+<section class="dining section-padding" id="dining">
+  <div class="container">
+    <div class="dining-grid">
+      <div class="fade-in">
+        <span class="section-label en">Dining</span>
+        <h2 class="section-title" style="color: var(--white);">
+          外出不要の<br>おこもり食体験
+        </h2>
+        <p class="section-desc">
+          お部屋から一歩も出ずに、淡路島の食を堪能。<br>
+          「PICNIC GARDEN」監修の本格メニューを<br>
+          お部屋の冷蔵庫にご用意してお迎えします。
+        </p>
+        <ul class="dining-features">
+          <li>「PICNIC GARDEN」監修の本格BBQセット</li>
+          <li>淡路島の地鶏を使った特製鍋</li>
+          <li>焼きたてパンが届くモーニングBOX</li>
+          <li>クラフトビールサーバーの客室貸出</li>
+          <li>出張料理人による室内ディナー（予約制）</li>
+        </ul>
+      </div>
+      <div class="dining-image fade-in">
+        <img src="images/ocean-view-terrace.jpg" alt="テラスでのBBQとオーシャンビュー" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== EXPERIENCE ======== -->
+<section class="experience section-padding">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label en">Experience</span>
+      <h2 class="section-title">あなたらしい過ごし方を</h2>
+    </div>
+    <div class="experience-grid">
+      <div class="experience-card fade-in">
+        <span class="experience-icon" aria-hidden="true">&#x1F46A;</span>
+        <h3 class="experience-name">3世代ファミリー旅行</h3>
+        <p class="experience-text">おじいちゃん、おばあちゃんも一緒に。1棟貸切だから気兼ねなく、家族だけの思い出を。</p>
+      </div>
+      <div class="experience-card fade-in">
+        <span class="experience-icon" aria-hidden="true">&#x2728;</span>
+        <h3 class="experience-name">大人の贅沢リトリート</h3>
+        <p class="experience-text">経営者仲間やご友人と。サウナ、美食、絶景──誰にも邪魔されない至福の時間。</p>
+      </div>
+      <div class="experience-card fade-in">
+        <span class="experience-icon" aria-hidden="true">&#x1F382;</span>
+        <h3 class="experience-name">記念日・お祝い旅行</h3>
+        <p class="experience-text">誕生日、結婚記念日、還暦祝い。出張料理人のディナーで特別な一日を演出。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== INFO ======== -->
+<section class="info section-padding" id="info">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label en">Information</span>
+      <h2 class="section-title">施設情報</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-map fade-in">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000!2d134.7912865!3d34.4314137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554bbe8e270ff13%3A0x6d00c768f7b9d030!2z44CSNjU2LTE1NTQg5YW15bqr55yM5reh6Lev5biC5rex6I2J77yZ77yS77yY!5e0!3m2!1sja!2sjp!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="KONA Ocean Club の所在地"
+        ></iframe>
+      </div>
+      <dl class="info-table fade-in">
+        <div class="info-row">
+          <dt>施設名</dt>
+          <dd>KONA Ocean Club</dd>
+        </div>
+        <div class="info-row">
+          <dt>所在地</dt>
+          <dd>〒656-1554 兵庫県淡路市深草928</dd>
+        </div>
+        <div class="info-row">
+          <dt>開業</dt>
+          <dd>2026年4月末 グランドオープン</dd>
+        </div>
+        <div class="info-row">
+          <dt>客室</dt>
+          <dd>全4棟3タイプ（1棟貸切・定員4〜8名）</dd>
+        </div>
+        <div class="info-row">
+          <dt>設備</dt>
+          <dd>プライベートサウナ・ジャグジー・テラス・BBQグリル（全棟完備）</dd>
+        </div>
+        <div class="info-row">
+          <dt>料金</dt>
+          <dd>1棟 90,000円〜（税込・時期により変動）</dd>
+        </div>
+        <div class="info-row">
+          <dt>運営</dt>
+          <dd>株式会社SUGOMoRI</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="cta" id="cta">
+  <div class="container">
+    <p class="section-label en" style="color: var(--gold-light);">Reserve</p>
+    <h2 class="cta-title serif">
+      この景色を、家族だけのものに。<br>
+      <span class="en" style="font-size: 0.85em; opacity: 0.7;">2026.4 GRAND OPEN</span>
+    </h2>
+    <p class="cta-sub">先行予約・最新情報のご案内を承っております</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-gold">先行予約のお問い合わせ</a>
+      <a href="#" class="btn btn-outline en">LINE で最新情報を受け取る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer class="footer">
+  <div class="footer-logo en">KONA OCEAN CLUB</div>
+  <p>&copy; 2026 KONA Ocean Club / SUGOMoRI Inc. All rights reserved.</p>
+</footer>
+
+<!-- ======== JS ======== -->
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+hamburger.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    nav.classList.toggle('open');
+  }
+});
+// Close menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => nav.classList.remove('open'));
+});
+
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
